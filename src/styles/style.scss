@@ -1,0 +1,282 @@
+@import "variables";
+@import "basic_bootstrap";
+
+body {
+  background-image: url("../data/images/whitehouseFaded.jpg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  max-height: none;
+  overflow-x: hidden;
+}
+
+
+.banner {
+  color: white;
+  position: relative;
+  padding: 0 0;
+  height: 560px;
+  text-align: start;
+  @include media-breakpoint-up(md){
+    height:500px;
+  }
+
+  .banner-body {
+    .calendar-col {
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        top: -1.7rem;
+      }
+    }
+    .calendar {
+      font-family: $calendar-font;
+      font-size: 3rem;
+      text-align: center;
+      @include media-breakpoint-down(sm) {
+        font-size: 2.6rem;
+        line-height: 90%;
+      }
+    }
+  }
+
+  .state-text {
+    color: yellow;
+    line-height: 1;
+    font-size: 5rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 7rem;
+    }
+  }
+
+  .hero-text {
+    line-height: 1;
+    font-family: $poppins-font;
+    font-size: 5rem;
+    margin-bottom:0;
+    @media (max-width: 400px) {
+      font-size: 9rem;
+    }
+  }
+
+  #hero-phrase {
+    font-weight: bold;
+    color: yellow;
+    position: relative;
+    left: 2.7rem;
+    top:-1.2rem;
+    margin-bottom: 0;
+    font-size:3.0rem;
+  }
+
+  .absolute-top-center {
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .banner-image {
+    height: 100%;
+    z-index: $banner-image-z-index;
+  }
+  &:after {
+    content: '';
+    display: block;
+    background:rgba(0, 0, 115,.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .banner-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    .graphic-button {
+      color: white;
+      border-color: #007bff;
+      line-height: 1;
+      background: #153a91ab;
+      height:10rem;
+      min-width:8rem;
+      border-radius:0.8rem;
+      margin:4px;
+      @include media-breakpoint-down(sm) {
+        height: 7rem;
+      }
+      &:hover {
+        svg {
+          font-size: 5.2rem;
+          @include media-breakpoint-down(sm) {
+            font-size: 4rem;
+          }
+        }
+      }
+      svg {
+        font-size: 5rem;
+        margin-top: 4px;
+        @include media-breakpoint-down(sm) {
+          font-size: 3.8rem;
+        }
+      }
+      p {
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        color: white;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#state-dates {
+  background:$light-blue + FF;
+  color:white;
+  h2 {
+    font-weight: 700;
+    fontSize: 3rem;
+  }
+  h3 {
+    fontSize: 2.1rem;
+    font-family: "Poppins";
+  }
+  li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    list-style: square;
+    font-family: "Poppins";
+  }
+}
+
+#state-svg {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+  .state {
+    path {
+      cursor: pointer;
+      &:hover{
+        fill: blue;
+      }
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  background: black;
+  color: white;
+  margin-top: 2rem;
+  div {
+    padding-top: 2rem;
+  }
+}
+
+// Content
+.featurettes {
+  .featurette {
+    margin: 1rem auto;
+    background: white;
+    border-radius: 0.8rem;
+    .featurette-heading {
+      font-size: 2.2rem;
+    }
+    .featurette-image {
+      height: 300px;
+    }
+  }
+  .featurette-title {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+hr.featurette-divider {
+  margin: 2rem auto; /* Space out the Bootstrap <hr> more */
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+#genElectionInfo {
+  padding-left: 10px;
+  @include media-breakpoint-down(sm) {
+    padding-left: 15px;
+    margin-top: 1rem;
+  }
+}
+
+.resource-cards {
+  .card {
+    min-height: 212px;
+  }
+  a {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+}
+
+.share {
+  .share-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-down(sm) {
+      margin: 1rem auto;
+    }
+  }
+  .share-text {
+    @include media-breakpoint-only(md) {
+      font-size:1.8rem;
+    }
+  }
+}
+
+.compare{
+  h2 {
+    text-align: center;
+    text-size: 2.5rem;
+    font-family: $poppins-font;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+.state-table {
+  background: white;
+  border-radius: 0.5rem;
+  thead {
+    th:first-child {
+      min-width:200px;
+      width:30%;
+    }
+  }
+  tbody {
+    p:last-child {
+      margin-bottom:0;
+    }
+    @include media-breakpoint-down(xs) {
+      h3 {
+        font-size:1.4rem;
+      }
+      td:first-child {
+        max-width: 160px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "California",
+    "initials": "CA",
+    "registerLink": "http://registertovote.ca.gov",
+    "calendarInfo": {
+        "genInfo": [
+            "Early Voting: Dates Vary by Locality - Contact your local election office",
+            "In-Person Absentee Voting: Not available"
+        ],
+        "voterRegistrationDeadlines": [
+            "Online by Mon Oct 19, 2020",
+            "Postmarked by Mon Oct 19, 2020",
+            "Conditional Registration Begins on Tue Oct 20, 2020"
+        ],
+        "absenteeInfo": [
+            "Deadline to Request an Absentee Ballot: Received by Tue Oct 27, 2020",
+            "Deadline to Return Completed Absentee Ballot: Hand Delivered by Tue Nov 3, 2020 8:00PM PST"
+        ]
+    }
+}

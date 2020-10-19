@@ -1,0 +1,65 @@
+@import "variables";
+@import "basic_bootstrap";
+
+$light-blue: #4E8BEC;
+
+header {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  z-index:100;
+
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  &.isOpen{
+    background: $light-blue + F8;
+    border: solid black
+  }
+  .title {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Poppins";
+  }
+}
+
+.headerContainer {
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  flex: 100%;
+  border: 10px solid rgb(94, 169, 249);
+  padding: 10px 0;
+  .navLink {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    background: #329cea;
+    border: white;
+    border-radius: 1rem;
+    border-bottom-style: solid;
+    width: 100%;
+    transition: 0.5s;
+    &:hover {
+      width:100%;
+      text-align: center;
+      background: rebeccapurple;
+    }
+    @include media-breakpoint-only(sm){
+      width:240px;
+    }
+    @include media-breakpoint-up(md){
+      width: 80%;
+    }
+  }
+}
+
+
+.btnHamburger {
+  z-index: 2;
+  border: none;
+  background: none;
+}
+
+

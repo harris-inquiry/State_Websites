@@ -1,0 +1,79 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+// @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.demRepComparison {
+  tbody tr {
+    cursor: pointer;
+    @include media-breakpoint-down(sm) {
+      position: relative;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    tbody td{
+      &.dem, &.rep {
+        padding-top: 2.5rem;
+      }
+    }
+  }
+  p {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.topic {
+  text-align: center;
+  width: 20%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: Poppins;
+  text-transform: uppercase;
+  @include media-breakpoint-down(sm){
+    width:100%;
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+.topicTitle {
+  @include media-breakpoint-down(sm) {
+    border: none !important;
+    span{
+      display:none;
+    }
+  }
+}
+
+.dem-and-rep {
+  width: 40%;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 700;
+  transition: background 0.5s;
+  @include media-breakpoint-down(sm){
+    font-size:1.6rem;
+    width:50%;
+    /* background: linear-gradient(to left, #ff0000 50%, #7f307f 100%); */
+  }
+  @media (max-width: 400px) {
+    font-size: 1.3rem;
+  }
+}
+
+.dem {
+  @extend .dem-and-rep;
+  text-align: end;
+  background: linear-gradient(to right, #0000ae 50%, #7f7fff 100%);
+}
+
+.rep {
+  @extend .dem-and-rep;
+  text-align: start;
+  background: linear-gradient(to left, #ff0000 50%, #ff7f7f 100%);
+}
