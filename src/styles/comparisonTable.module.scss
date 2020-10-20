@@ -1,7 +1,5 @@
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-// @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "variables";
+@import "basic_bootstrap";
 
 .demRepComparison {
   tbody tr {

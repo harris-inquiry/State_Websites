@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Card, Row, Col, Container } from "react-bootstrap"
+import { Card, Container } from "react-bootstrap"
 
 import StateSelect from "./stateSelect"
 import SplitInfoCard from "./splitInfoCard"
@@ -28,7 +28,7 @@ function getStateLink(state, linkType){
   }
   try {
     var link = STATES_DATA[state][linkType]
-    if( link == "" & linkType == "earlyVoteLink" ){
+    if( link === "" & linkType === "earlyVoteLink" ){
       link = STATES_DATA[state]["absenteeLink"]
     }
     return link
@@ -43,7 +43,7 @@ const StateElectionDates = () => {
   return (
     <Card id="state-dates">
       <Card.Body>
-        <h2>Voting Info: <span style={{color:"yellow", textTransform:"uppercase"}}>{(usState !== NO_STATE) ? usState.replace("_", " ") : "SELECT"}</span></h2>
+        <h2>Voting Info: <span>{(usState !== NO_STATE) ? usState.replace("_", " ") : "SELECT"}</span></h2>
         <StateSelect onChange={(state) => setUSState(state)}/>
         <div style={{display:(usState === NO_STATE ? "none" : "inherit")}}>
           <p style={{textAlign:"right", fontSize:"1rem"}}>*Dates may not be up to date: Check with your state's local laws</p>
@@ -54,24 +54,21 @@ const StateElectionDates = () => {
                 {getStateInfo(usState,"voterRegistrationDeadlines")}
               </ul>
             </SplitInfoCard>
-          </Container>
-          <hr/>
-          <Container>
+            <hr/>
             <SplitInfoCard icon="envelope" link={getStateLink(usState, "earlyVoteLink")}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Early Voting</h3>
               <ul>
                 {getStateInfo(usState,"genInfo")}
               </ul>
             </SplitInfoCard>
-          </Container>
-          <hr/>
-          <Container>
+            <hr/>
             <SplitInfoCard icon="voteyea" link={getStateLink(usState, "absenteeLink")}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Absentee Voting</h3>
               <ul>
                 {getStateInfo(usState,"absenteeInfo")}
               </ul>
             </SplitInfoCard>
+            <hr/>
           </Container>
         </div>
       </Card.Body>

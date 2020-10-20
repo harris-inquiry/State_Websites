@@ -65,7 +65,7 @@ const IndexPage = () => {
         </Row>
       </Container>
 
-      <Container className="featurettes" style={{margin:"2rem auto"}}>
+      <Container className="featurettes" style={{paddingTop:"1rem", paddingBottom:"1rem"}}>
         <InfoCard className="featurette">
           <Row>
             <Col md="4" lg="3" className="featurette-title">

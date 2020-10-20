@@ -1,0 +1,30 @@
+@import "variables";
+@import "basic_bootstrap";
+
+
+.splitRow {
+  background:white;
+  color:black;
+  border-radius:0.5rem;
+}
+
+.colButton {
+  align-items: center;
+  justify-content: center;
+  background:darkviolet;
+  border-radius:0 .5rem .5rem 0;
+  display: flex;
+  p {
+    font-style:italic;
+    color:white;
+  }
+  svg {
+    font-size: 4rem;
+    color: white;
+  }
+  div {
+    text-align:center;
+    margin:1rem;
+  }
+}
+

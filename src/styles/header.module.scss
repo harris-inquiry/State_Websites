@@ -1,8 +1,6 @@
 @import "variables";
 @import "basic_bootstrap";
 
-$light-blue: #4E8BEC;
-
 header {
   position: absolute;
   left:0;
@@ -16,7 +14,7 @@ header {
   padding: 1rem;
   &.isOpen{
     background: $light-blue + F8;
-    border: solid black
+    border: solid black;
   }
   .title {
     color: white;

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Collapse, Col, Row } from "react-bootstrap"
+import { Collapse, Col } from "react-bootstrap"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'

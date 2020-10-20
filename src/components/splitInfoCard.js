@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboardCheck, faEnvelope, faVoteYea } from '@fortawesome/free-solid-svg-icons'
 
+import style from "../styles/splitInfoCard.module.scss"
 
 function getImage(icon){
   switch(icon) {
@@ -15,15 +16,15 @@ function getImage(icon){
 }
 
 const SplitInfoCard = ({className, children, icon, link}) => (
-  <Row style={{background:"white", color:"black", borderRadius:".5rem"}}>
+  <Row className={style.splitRow}>
     <Col sm={8}>
       {children}
     </Col>
-    <Col className="d-flex justify-content-center align-items-center" style={{background:"darkviolet", borderRadius:"0 .5rem .5rem 0"}}>
-      <div style={{textAlign:"center", margin:"1rem"}}><a href={link}>
-        <FontAwesomeIcon style={{fontSize:"4rem", color:"white"}} icon={ getImage(icon) } />
-        <p style={{fontStyle:"italic", color:"white"}}>State Website<span>&#187;</span></p>
-      </a></div>
+    <Col as="a" href={link} className={style.colButton}>
+      <div>
+        <FontAwesomeIcon icon={ getImage(icon) } />
+        <p>State Website<span>&#187;</span></p>
+      </div>
     </Col>
   </Row>
 )
