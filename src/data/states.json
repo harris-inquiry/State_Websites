@@ -531,7 +531,7 @@
     "earlyVoteLink": ""
   },
   "New_Jersey": {
-    "registerLink": "",
+    "registerLink": "https://voter.svrs.nj.gov/register",
     "genInfo": [
       "Early Voting: Check with your state",
       "In-Person Absentee Voting: Check with your state"
