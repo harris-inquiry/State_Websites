@@ -1,17 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { Card, Container } from "react-bootstrap"
 
-import StateSelect from "./stateSelect"
 import SplitInfoCard from "./splitInfoCard"
-import { STATES_DATA, NO_STATE } from "../data/states"
+import { STATES_DATA } from "../data/states"
 
-
-/* const stateList = Object.keys(STATES_DATA) */
 
 function getStateInfo(state, info){
-  if( state === NO_STATE ){
-    return NO_STATE
-  }
   try {
     return (
       STATES_DATA[state][info].map((info)=>
@@ -23,9 +17,6 @@ function getStateInfo(state, info){
 }
 
 function getStateLink(state, linkType){
-  if( state === NO_STATE ){
-    return NO_STATE
-  }
   try {
     var link = STATES_DATA[state][linkType]
     if( link === "" & linkType === "earlyVoteLink" ){
@@ -37,15 +28,12 @@ function getStateLink(state, linkType){
   }
 }
 
-const StateElectionDates = () => {
-  const [usState, setUSState] = useState(NO_STATE)
+const StateElectionDates = ({state: usState}) => {
 
   return (
     <Card id="state-dates">
       <Card.Body>
-        <h2>Voting Info: <span>{(usState !== NO_STATE) ? usState.replace("_", " ") : "SELECT"}</span></h2>
-        <StateSelect onChange={(state) => setUSState(state)}/>
-        <div style={{display:(usState === NO_STATE ? "none" : "inherit")}}>
+        <div>
           <p style={{textAlign:"right", fontSize:"1rem"}}>*Dates may not be up to date: Check with your state's local laws</p>
           <Container>
             <SplitInfoCard icon="clipboard" link={getStateLink(usState, "registerLink")}>
@@ -76,27 +64,8 @@ const StateElectionDates = () => {
   )
 }
 
-const StateElectionDatesStatic = ({ state: usState }) => (
-  <Card id="state-dates">
-    <Card.Body>
-      <h2 style={{fontSize:"3rem"}}>Voting Info: <span style={{color:"yellow", textTransform:"uppercase"}}>{(usState !== NO_STATE) ? usState.replace("_", " ") : "SELECT"}</span></h2>
-      <div style={{marginTop:'1rem', display:(usState === NO_STATE ? "none" : "inherit")}}>
-        <ul>
-          {getStateInfo(usState,"genInfo")}
-        </ul>
-        <hr/>
-        <h3 style={{marginTop:"1rem", fontSize:"2.1rem"}}>Voter Registration</h3>
-        <ul>
-          {getStateInfo(usState,"voterRegistrationDeadlines")}
-        </ul>
-        <hr/>
-        <ul>
-          {getStateInfo(usState,"absenteeInfo")}
-        </ul>
-      </div>
-    </Card.Body>
-  </Card>
-)
+StateElectionDates.defaultProps = {
+  state: "Arizona"
+}
 
-export { StateElectionDatesStatic }
 export default StateElectionDates
