@@ -55,14 +55,14 @@ const StateElectionDates = () => {
               </ul>
             </SplitInfoCard>
             <hr/>
-            <SplitInfoCard icon="envelope" link={getStateLink(usState, "earlyVoteLink")}>
+            <SplitInfoCard icon="voteyea" link={getStateLink(usState, "earlyVoteLink")}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Early Voting</h3>
               <ul>
                 {getStateInfo(usState,"genInfo")}
               </ul>
             </SplitInfoCard>
             <hr/>
-            <SplitInfoCard icon="voteyea" link={getStateLink(usState, "absenteeLink")}>
+            <SplitInfoCard icon="envelope" link={getStateLink(usState, "absenteeLink")}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Absentee Voting</h3>
               <ul>
                 {getStateInfo(usState,"absenteeInfo")}
