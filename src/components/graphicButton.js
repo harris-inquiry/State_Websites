@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboardCheck, faHome, faEnvelope, faVoteYea} from '@fortawesome/free-solid-svg-icons'
@@ -15,16 +14,10 @@ function getImage(icon){
 }
 
 const GraphicButton = ({ title, to, style, className, icon}) => (
-  <Link to={to} className={"graphic-button btn " + className} style={{...style}}>
+  <a href={to} className={"graphic-button btn " + className} style={{...style}}>
     <FontAwesomeIcon icon={ getImage(icon) } />
     <p>{title}</p>
-  </Link>
+  </a>
 )
-
-GraphicButton.defaultProps = {
-  title: "The Issues",
-  color: "crimson",
-  to: "/"
-}
 
 export default GraphicButton

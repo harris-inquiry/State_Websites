@@ -25,11 +25,6 @@ const Header = ({ siteTitle }) => {
             <Link to="/Issues" className={`nav-link ${style.navLink}`}>On the Issues</Link>
             <Link to="/resources" className={`nav-link ${style.navLink}`}>Get Involved</Link>
           </Col>
-          <Col sm>
-            <Link to="/register" className={`nav-link ${style.navLink}`}>Register to Vote</Link>
-            <Link to="/AbsenteeVoting" className={`nav-link ${style.navLink}`}>Absentee Voting</Link>
-            <Link to="/EarlyVoting" className={`nav-link ${style.navLink}`}>Early Voting</Link>
-          </Col>
         </div>
       </Collapse>
     </header>
