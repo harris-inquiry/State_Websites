@@ -1,19 +1,21 @@
 {
-    "stateName": "Alabama",
-    "initials": "AL",
-    "registerLink": "https://www.alabamavotes.gov/olvr/default.aspx",
-    "absenteeLink": "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting",
-    "earlyVoteLink": "",
-    "genInfo": [
-        "Early Voting: Check with your state",
-        "In-Person Absentee Voting: Sep 9, 2020 - Oct 29, 2020"
-    ],
-    "voterRegistrationDeadlines": [
-        "Received by Mon Oct 19, 2020",
-        "Online by Mon Oct 19, 2020"
-    ],
-    "absenteeInfo": [
-        "Deadline to Request an Absentee Ballot: Thu Oct 29, 2020",
-        "Deadline to Return Completed Absentee Ballot: Hand Delivered by Mon Nov 2, 2020 5:00PM"
-    ]
+  "stateName": "Michigan",
+  "initials": "MI",
+  "registerLink": "https://mvic.sos.state.mi.us/RegisterVoter",
+  "absenteeLink": "https://www.michigan.gov/sos/0,4670,7-127-1633_8716_8728-21037--,00.html",
+  "earlyVoteLink": "https://www.michigan.gov/sos/0,4670,7-127-5647_12539-540401--,00.html",
+  "genInfo": [
+    "Early Voting: Check with your state",
+    "In-Person Absentee Voting: Sep 24, 2020 - Nov 2, 2020"
+  ],
+  "voterRegistrationDeadlines": [
+    "Post received by Mon Oct 19, 2020",
+    "Election Day Registration & Voting Tue Nov 3, 2020",
+    "In the Election Office by Mon Nov 2, 2020 4:00PM EST",
+    "Same Day Registration & Voting ends Tue Nov 3, 2020 8:00PM EST"
+  ],
+  "absenteeInfo": [
+    "Deadline to Request an Absentee Ballot: Received by Fri Oct 30, 2020 5:00PM EDT",
+    "Deadline to Return Completed Absentee Ballot: Post received by Tue Nov 17, 2020"
+  ]
 }
