@@ -2,7 +2,7 @@ import React from "react"
 import { Card, Container } from "react-bootstrap"
 
 import SplitInfoCard from "./splitInfoCard"
-/* import { STATE_DATA } from "../data/states" */
+import { getStateLink } from "../data/states"
 
 
 function getStateInfo(info, stateData){
@@ -10,23 +10,12 @@ function getStateInfo(info, stateData){
     return (
       stateData[info].map((info)=>
         <li key={"_" + info}>{info}</li>
-    ))
+    ));
   } catch (er) {
-    return "DATA_RETRIEVE_FAILED"
+    return "DATA_RETRIEVE_FAILED";
   }
 }
 
-function getStateLink(linkType, stateData){
-  try {
-    var link = stateData[linkType]
-    if( link === "" & linkType === "earlyVoteLink" ){
-      link = stateData["absenteeLink"]
-    }
-    return link
-  } catch (er) {
-    return "./404"
-  }
-}
 
 const StateElectionDates = ({stateData}) => {
   return (

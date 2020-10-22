@@ -6,13 +6,15 @@ import { Row, Container, Carousel} from "react-bootstrap"
 import GraphicButton from "./graphicButton"
 import Image from "./image"
 
+import { STATE_DATA, getStateLink } from "../data/states"
+
 
 function BasicGraphicButtons() {
   return (
     <Row className="justify-content-end banner-buttons">
-      <GraphicButton className="col-md-2 col" title="Register" to="/register" icon="clipboard" />
-      <GraphicButton className="col-md-2 col-6" title="Early Voting" to="/EarlyVoting" icon="voteyea" />
-      <GraphicButton className="col-md-2 col" title="Absentee Voting" to="/AbsenteeVoting" icon="envelope" />
+      <GraphicButton className="col-md-2 col" title="Register" to={getStateLink("registerLink", STATE_DATA)} icon="clipboard" />
+      <GraphicButton className="col-md-2 col-6" title="Early Voting" to={getStateLink("earlyVoteLink", STATE_DATA)} icon="voteyea" />
+      <GraphicButton className="col-md-2 col" title="Absentee Voting" to={getStateLink("absenteeLink", STATE_DATA)} icon="envelope" />
     </Row>
   )
 }
