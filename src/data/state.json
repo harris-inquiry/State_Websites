@@ -1,19 +1,18 @@
 {
-    "stateName": "Alabama",
-    "initials": "AL",
-    "registerLink": "https://www.alabamavotes.gov/olvr/default.aspx",
-    "absenteeLink": "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting",
-    "earlyVoteLink": "",
-    "genInfo": [
-        "Early Voting: Check with your state",
-        "In-Person Absentee Voting: Sep 9, 2020 - Oct 29, 2020"
-    ],
-    "voterRegistrationDeadlines": [
-        "Received by Mon Oct 19, 2020",
-        "Online by Mon Oct 19, 2020"
-    ],
-    "absenteeInfo": [
-        "Deadline to Request an Absentee Ballot: Thu Oct 29, 2020",
-        "Deadline to Return Completed Absentee Ballot: Hand Delivered by Mon Nov 2, 2020 5:00PM"
-    ]
+  "stateName": "Arizona",
+  "initials": "AZ",
+  "registerLink": "https://servicearizona.com/VoterRegistration/selectLanguage",
+  "absenteeLink": "https://azsos.gov/votebymail",
+  "earlyVoteLink": "",
+  "genInfo": [
+    "Early Voting: Oct 7, 2020 - Oct 30, 2020",
+    "In-Person Absentee Voting: Check with your state"
+  ],
+  "voterRegistrationDeadlines": [
+    "Mon Oct 5, 2020"
+  ],
+  "absenteeInfo": [
+    "Deadline to Request an Absentee Ballot: Received by Fri Oct 23, 2020 5:00PM MST",
+    "Deadline to Return Completed Absentee Ballot: Received by Tue Nov 3, 2020 7:00PM MST"
+  ]
 }
