@@ -24,7 +24,7 @@ const IndexPage = () => {
           <Col md>
             <h1 className="hero-text">{STATE_DATA["stateName"]}</h1>
           </Col>
-          <Col className="calendar-col">
+          <Col>
             <div className="calendar">Vote Tuesday, November 3rd</div>
           </Col>
         </Row>
