@@ -1,50 +1,36 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Row, Col, Container } from 'react-bootstrap'
-import Banner from "../components/banner"
+import { CarouselBanner } from "../components/banner"
 import InfoCard from "../components/infoCard"
 import StateElectionDates from "../components/stateElectionDates"
 import ImageCard from "../components/imageCard"
 
+import { STATE_DATA } from "../data/states"
+
 import "../styles/index.scss"
 
 
-const taglines = ["Smart", "Confident", "Safe"]
-function getNewTagline(oldTagLine){
-  return taglines[(taglines.indexOf(oldTagLine) + 1) % taglines.length];
-}
-
-
 const IndexPage = () => {
-  const [tagline, setTagline] = useState(taglines[0])
-
-  useEffect(() => {
-    const i = setInterval(() => {
-      setTagline(prevTag => getNewTagline(prevTag))
-    }, 2000 )
-    return () => clearInterval(i)
-  }, [])
-
 
   return (
     <Layout>
       <SEO title="Home" description="Vote today!"/>
-      <Banner image="americanFlag">
-        <Row className="banner-body">
+      <CarouselBanner>
+        <Row>
           <Col md>
-            <h1 className="hero-text" style={{fontSize:"10rem", lineHeight:0.8}}>Vote</h1>
-            <span id="hero-phrase">{tagline}</span>
+            <h1 className="hero-text">{STATE_DATA["stateName"]}</h1>
           </Col>
-          <Col md="5" className="calendar-col">
-            <div className="calendar">Tuesday, November 3rd</div>
+          <Col className="calendar-col">
+            <div className="calendar">Vote Tuesday, November 3rd</div>
           </Col>
         </Row>
-      </Banner>
+      </CarouselBanner>
 
-      <StateElectionDates/>
+      <StateElectionDates stateData={STATE_DATA} />
 
       <Container fluid>
         <Row className="imageButtons">

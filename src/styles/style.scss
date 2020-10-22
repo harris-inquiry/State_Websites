@@ -27,21 +27,20 @@ main {
     height:500px;
   }
 
-  .banner-body {
-    .calendar-col {
-      @include media-breakpoint-down(sm) {
-        position: relative;
-        top: -1.7rem;
-      }
+  .calendar {
+    color: yellow;
+    font-family: $calendar-font;
+    font-size: 2.8rem;
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.6rem;
+      line-height: 90%;
     }
-    .calendar {
-      font-family: $calendar-font;
-      font-size: 3rem;
-      text-align: center;
-      @include media-breakpoint-down(sm) {
-        font-size: 2.6rem;
-        line-height: 90%;
-      }
+  }
+
+  .carousel {
+    .carousel-inner {
+      height: 100%;
     }
   }
 
@@ -55,23 +54,11 @@ main {
   }
 
   .hero-text {
-    line-height: 1;
+    text-transform: uppercase;
+    line-height: 0.8;
     font-family: $poppins-font;
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom:0;
-    @media (max-width: 400px) {
-      font-size: 9rem;
-    }
-  }
-
-  #hero-phrase {
-    font-weight: bold;
-    color: yellow;
-    position: relative;
-    left: 2.7rem;
-    top:-1.2rem;
-    margin-bottom: 0;
-    font-size:3.0rem;
   }
 
   .absolute-top-center {
@@ -82,10 +69,7 @@ main {
     left: 0;
     bottom: 0;
   }
-  .banner-image {
-    height: 100%;
-    z-index: $banner-image-z-index;
-  }
+
   &:after {
     content: '';
     display: block;

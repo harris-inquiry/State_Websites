@@ -1,5 +1,7 @@
 import React from "react"
-import { Row, Container} from "react-bootstrap"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { Row, Container, Carousel} from "react-bootstrap"
 
 import GraphicButton from "./graphicButton"
 import Image from "./image"
@@ -15,10 +17,9 @@ function BasicGraphicButtons() {
   )
 }
 
-
 const Banner = ({image, children}) => (
   <div className="banner">
-    <Image className="banner-image" imageName={image} imgStyle={{ objectPosition:"top" }} />
+    <Image className="h-100" imageName={image} imgStyle={{ objectPosition:"top" }} />
     <Container className="absolute-top-center" style={{zIndex:1}}>
       {children}
       {BasicGraphicButtons()}
@@ -26,4 +27,39 @@ const Banner = ({image, children}) => (
   </div>
 )
 
+const CarouselBanner = ({children}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: {relativeDirectory: {eq:"images/CarouselImages"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <div className="banner">
+      <Carousel className="h-100" indicators={false} controls={false}>
+        {data.allFile.edges.map( ({node}) =>
+          <Carousel.Item className="h-100">
+            <Img fluid={node.childImageSharp.fluid} className="h-100" imgStyle={{ objectPosition:"top" }} />
+          </Carousel.Item>
+        )}
+      </Carousel>
+      <Container className="absolute-top-center" style={{zIndex:1}}>
+        {children}
+        {BasicGraphicButtons()}
+      </Container>
+    </div>
+  )
+}
+
 export default Banner
+export { CarouselBanner }

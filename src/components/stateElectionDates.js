@@ -2,25 +2,25 @@ import React from "react"
 import { Card, Container } from "react-bootstrap"
 
 import SplitInfoCard from "./splitInfoCard"
-import { STATES_DATA } from "../data/states"
+/* import { STATE_DATA } from "../data/states" */
 
 
-function getStateInfo(state, info){
+function getStateInfo(info, stateData){
   try {
     return (
-      STATES_DATA[state][info].map((info)=>
-        <li key={state + "_" + info}>{info}</li>
+      stateData[info].map((info)=>
+        <li key={"_" + info}>{info}</li>
     ))
   } catch (er) {
     return "DATA_RETRIEVE_FAILED"
   }
 }
 
-function getStateLink(state, linkType){
+function getStateLink(linkType, stateData){
   try {
-    var link = STATES_DATA[state][linkType]
+    var link = stateData[linkType]
     if( link === "" & linkType === "earlyVoteLink" ){
-      link = STATES_DATA[state]["absenteeLink"]
+      link = stateData["absenteeLink"]
     }
     return link
   } catch (er) {
@@ -28,32 +28,31 @@ function getStateLink(state, linkType){
   }
 }
 
-const StateElectionDates = ({state: usState}) => {
-
+const StateElectionDates = ({stateData}) => {
   return (
     <Card id="state-dates">
       <Card.Body>
         <div>
           <p style={{textAlign:"right", fontSize:"1rem"}}>*Dates may not be up to date: Check with your state's local laws</p>
           <Container>
-            <SplitInfoCard icon="clipboard" link={getStateLink(usState, "registerLink")}>
+            <SplitInfoCard icon="clipboard" link={getStateLink("registerLink", stateData)}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Voter Registration</h3>
               <ul>
-                {getStateInfo(usState,"voterRegistrationDeadlines")}
+                {getStateInfo("voterRegistrationDeadlines", stateData)}
               </ul>
             </SplitInfoCard>
             <hr/>
-            <SplitInfoCard icon="voteyea" link={getStateLink(usState, "earlyVoteLink")}>
+            <SplitInfoCard icon="voteyea" link={getStateLink("earlyVoteLink", stateData)}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Early Voting</h3>
               <ul>
-                {getStateInfo(usState,"genInfo")}
+                {getStateInfo("genInfo", stateData)}
               </ul>
             </SplitInfoCard>
             <hr/>
-            <SplitInfoCard icon="envelope" link={getStateLink(usState, "absenteeLink")}>
+            <SplitInfoCard icon="envelope" link={getStateLink("absenteeLink", stateData)}>
               <h3 style={{marginTop:"1rem", fontWeight:700}}>Absentee Voting</h3>
               <ul>
-                {getStateInfo(usState,"absenteeInfo")}
+                {getStateInfo("absenteeInfo", stateData)}
               </ul>
             </SplitInfoCard>
             <hr/>
@@ -62,10 +61,6 @@ const StateElectionDates = ({state: usState}) => {
       </Card.Body>
     </Card>
   )
-}
-
-StateElectionDates.defaultProps = {
-  state: "Arizona"
 }
 
 export default StateElectionDates
