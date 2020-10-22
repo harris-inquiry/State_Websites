@@ -1,19 +1,21 @@
 {
-    "stateName": "Alabama",
-    "initials": "AL",
-    "registerLink": "https://www.alabamavotes.gov/olvr/default.aspx",
-    "absenteeLink": "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting",
-    "earlyVoteLink": "",
-    "genInfo": [
-        "Early Voting: Check with your state",
-        "In-Person Absentee Voting: Sep 9, 2020 - Oct 29, 2020"
-    ],
-    "voterRegistrationDeadlines": [
-        "Received by Mon Oct 19, 2020",
-        "Online by Mon Oct 19, 2020"
-    ],
-    "absenteeInfo": [
-        "Deadline to Request an Absentee Ballot: Thu Oct 29, 2020",
-        "Deadline to Return Completed Absentee Ballot: Hand Delivered by Mon Nov 2, 2020 5:00PM"
-    ]
+  "stateName": "Wisconsin",
+  "initials": "WI",
+  "registerLink": "https://myvote.wi.gov/en-us/RegisterToVote",
+  "absenteeLink": "https://elections.wi.gov/voters/absentee",
+  "earlyVoteLink": "https://elections.wi.gov/voters/absentee",
+  "genInfo": [
+    "Early Voting: Dates Vary by Locality - Contact your local election office",
+    "In-Person Absentee Voting: Check with your state"
+  ],
+  "voterRegistrationDeadlines": [
+    "Online by Wed Oct 14, 2020",
+    "Postmarked by Wed Oct 14, 2020",
+    "Election Day Registration & Voting Tue Nov 3, 2020",
+    "In the Election Office by Fri Oct 30, 2020"
+  ],
+  "absenteeInfo": [
+    "Deadline to Request an Absentee Ballot: Indefinitely Confined Voters by Fri Oct 30, 2020 5:00PM CDT",
+    "Deadline to Return Completed Absentee Ballot: Received by Tue Nov 3, 2020 8:00PM"
+  ]
 }
