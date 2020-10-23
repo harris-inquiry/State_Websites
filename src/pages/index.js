@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" description="Vote today!"/>
+      <SEO />
       <CarouselBanner>
         <Row>
           <Col md>
