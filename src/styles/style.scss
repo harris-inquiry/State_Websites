@@ -27,29 +27,24 @@ main {
     height:500px;
   }
 
-  .calendar {
-    color: yellow;
-    font-family: $calendar-font;
-    font-size: 2.8rem;
-    text-align: center;
-    @include media-breakpoint-down(sm) {
-      font-size: 2.6rem;
-      line-height: 90%;
-    }
-  }
-
   .carousel {
     .carousel-inner {
       height: 100%;
     }
   }
 
-  .state-text {
+  .calendar {
     color: yellow;
-    line-height: 1;
-    font-size: 5rem;
-    @include media-breakpoint-up(sm) {
-      font-size: 7rem;
+    font-family: $calendar-font;
+    font-size: 2.8rem;
+    text-align: center;
+    @include media-breakpoint-only(md) {
+      font-size: 2.3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 2.6rem;
+      line-height: 90%;
+      margin-top: 2rem;
     }
   }
 
@@ -59,6 +54,9 @@ main {
     font-family: $poppins-font;
     font-size: 6rem;
     margin-bottom:0;
+    @include media-breakpoint-down(xs) {
+      font-size: 5rem;
+    }
   }
 
   .absolute-top-center {
