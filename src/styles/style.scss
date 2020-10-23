@@ -41,10 +41,10 @@ main {
     @include media-breakpoint-down(sm) {
       font-size: 2.6rem;
       line-height: 90%;
+      margin-top: 2rem;
     }
     @include media-breakpoint-down(xs) {
       font-size: 2.4rem;
-      margin-top: 2rem;
     }
   }
 
