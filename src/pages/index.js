@@ -31,7 +31,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" description="Vote today!"/>
+      <SEO />
       <Banner image="americanFlag">
         <Row className="banner-body">
           <Col md>
