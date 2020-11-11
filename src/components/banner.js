@@ -51,7 +51,7 @@ const CarouselBanner = ({children}) => {
       <Carousel className="h-100" indicators={false} controls={false}>
         {data.allFile.edges.map( ({node}) =>
           <Carousel.Item className="h-100">
-            <Img fluid={node.childImageSharp.fluid} className="h-100" imgStyle={{ objectPosition:"top" }} />
+            <Img fluid={node.childImageSharp.fluid} className="h-100"/>
           </Carousel.Item>
         )}
       </Carousel>

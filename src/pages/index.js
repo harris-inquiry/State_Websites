@@ -21,11 +21,11 @@ const IndexPage = () => {
       <SEO />
       <CarouselBanner>
         <Row>
-          <Col md>
+          <Col lg>
             <h1 className="hero-text">{STATE_DATA["stateName"]}</h1>
           </Col>
           <Col className="calendar-col">
-            <div className="calendar">Vote Tuesday, November 3rd</div>
+            <div className="calendar">January 5, 2021 Georgia Senate Runoff Election</div>
           </Col>
         </Row>
       </CarouselBanner>

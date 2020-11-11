@@ -1,19 +1,17 @@
 {
-    "stateName": "Alabama",
-    "initials": "AL",
-    "registerLink": "https://www.alabamavotes.gov/olvr/default.aspx",
-    "absenteeLink": "https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting",
-    "earlyVoteLink": "",
-    "genInfo": [
-        "Early Voting: Check with your state",
-        "In-Person Absentee Voting: Sep 9, 2020 - Oct 29, 2020"
-    ],
-    "voterRegistrationDeadlines": [
-        "Received by Mon Oct 19, 2020",
-        "Online by Mon Oct 19, 2020"
-    ],
-    "absenteeInfo": [
-        "Deadline to Request an Absentee Ballot: Thu Oct 29, 2020",
-        "Deadline to Return Completed Absentee Ballot: Hand Delivered by Mon Nov 2, 2020 5:00PM"
-    ]
+  "stateName": "Georgia",
+  "initials": "GA",
+  "registerLink": "https://registertovote.sos.ga.gov/GAOLVR/",
+  "absenteeLink": "https://georgia.gov/vote-absentee-ballot",
+  "earlyVoteLink": "https://georgia.gov/early-voting",
+  "genInfo": [
+    "December 14, 2020 Advanced In Person (Early) Voting begins for the General Election Runoff for Federal Offices"
+  ],
+  "voterRegistrationDeadlines": [
+    "New Voter Registration deadline December 7, 2020"
+  ],
+  "absenteeInfo": [
+    "November 18, 2020 Earliest day for a registrar to mail an absentee ballot for the General Election Runoff for Federal Offices",
+    "Mail your completed ballot. For voters within the country, all absentee ballots must arrive at your county election office by Election Day. You can also drop your absentee ballot off at a drop-off location in your county"
+  ]
 }
