@@ -1,0 +1,10 @@
+node_modules
+public
+
+Dockerfile
+.dockerignore
+
+*.DS_Store
+
+.git
+.gitignore
