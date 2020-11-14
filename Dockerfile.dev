@@ -5,7 +5,7 @@ WORKDIR /usr/src/site
 COPY package.json ./
 RUN npm install
 
-COPY . .
+COPY --chown=node . .
 
 CMD ["npx", "gatsby", "develop", "-H", "0.0.0.0"]
 

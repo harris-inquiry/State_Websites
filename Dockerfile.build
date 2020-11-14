@@ -1,0 +1,9 @@
+FROM netlify/build:xenial
+
+WORKDIR /opt/buildhome/site
+
+COPY --chown=buildbot . .
+
+EXPOSE 8000
+
+CMD ["/opt/build-bin/build", "gatsby", "build"]
