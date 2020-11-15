@@ -122,31 +122,54 @@ main {
 }
 
 #state-dates {
-  background:$light-blue + FF;
-  .child {
-    h2 {
-      font-size: 3rem;
-      font-family: "Poppins";
-      font-weight: 700;
-      text-decoration: underline;
-    }
+  font-family: "Poppins";
+  [class^="col-"] {
+    margin-bottom: 1rem;
   }
-  h3 {
-    font-size: 2.1rem;
-    font-family: "Poppins";
+  .card {
+    height:100%;
+    margin-bottom: 1rem;
+  }
+  .card-title {
+    font-size: 3rem;
     margin-top: 1rem;
     font-weight: 700;
+    @include media-breakpoint-up(xl) {
+      font-size: 3.3rem;
+    }
   }
-  li {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    list-style: square;
-    font-family: "Poppins";
+  .card-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   .bottom-note {
-    text-align: left;
+    text-align: right;
     font-size: 1rem;
-    color: white
+  }
+}
+
+#my-voter-georgia {
+  font-family:"Poppins";
+  background: #ffcfcf;
+  padding: 2rem 0;
+  .title-column {
+    text-align: center;
+    .subtitle {
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      text-align: left;
+    }
+    .card-title {
+      font-size: 4rem;
+      font-weight: 700;
+      text-decoration: underline;
+      a{
+        color: black;
+      }
+    }
+  }
+  .text-column {
+    margin-top: 2rem;
   }
 }
 

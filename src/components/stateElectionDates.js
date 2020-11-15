@@ -1,61 +1,45 @@
 import React from "react"
-import { Container, Col, Row } from "react-bootstrap"
+import { Col, Row, Card, Button } from "react-bootstrap"
 
-import SplitInfoCard from "./splitInfoCard"
 import { getStateLink } from "../data/states"
 
 
-function getStateInfo(info, stateData){
-  try {
-    return (
-      stateData[info].map((info)=>
-        <li key={"_" + info}>{info}</li>
-      ));
-  } catch (er) {
-    return "DATA_RETRIEVE_FAILED";
-  }
-}
-
-
-const StateElectionDates = ({ stateData, children }) => {
+const StateElectionDates = ({ stateData }) => {
   return (
     <div id="state-dates">
-      <div>
-        <Container>
-          <Row>
-            <Col xl>
-              <hr/>
-              <SplitInfoCard icon="clipboard" link={getStateLink("registerLink", stateData)}>
-                <h3>Voter Registration</h3>
-                <ul>
-                  {getStateInfo("voterRegistrationDeadlines", stateData)}
-                </ul>
-              </SplitInfoCard>
-              <hr/>
-              <SplitInfoCard icon="voteyea" link={getStateLink("earlyVoteLink", stateData)}>
-                <h3>Early Voting</h3>
-                <ul>
-                  {getStateInfo("genInfo", stateData)}
-                </ul>
-              </SplitInfoCard>
-              <hr/>
-              <SplitInfoCard icon="envelope" link={getStateLink("absenteeLink", stateData)}>
-                <h3>Absentee Voting</h3>
-                <ul>
-                  {getStateInfo("absenteeInfo", stateData)}
-                </ul>
-              </SplitInfoCard>
-              <p className="bottom-note">*Dates may not be up to date: Check with your state's local laws</p>
-            </Col>
-            {children &&
-             <Col xl className="child">
-               <hr/>
-               {children}
-             </Col>
-            }
-          </Row>
-        </Container>
-      </div>
+      <p className="bottom-note">*Dates may not be up to date: Check with your state's local laws</p>
+      <Row id="state-dates">
+        <Col lg>
+          <Card>
+            <Card.Body>
+              <Card.Title>Register to Vote</Card.Title>
+              <Card.Subtitle>December 7, 2020</Card.Subtitle>
+              <Card.Text>New Voter Registration deadline</Card.Text>
+              <Button href={getStateLink("registerLink", stateData)}>Register Now</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col lg>
+          <Card>
+            <Card.Body>
+              <Card.Title>Early Voting</Card.Title>
+              <Card.Subtitle>December 14, 2020</Card.Subtitle>
+              <Card.Text>Advanced In Person (Early) Voting begins for the General Election Runoff for Federal Offices</Card.Text>
+              <Button href={getStateLink("earlyVoteLink", stateData)}>Vote Early</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col lg>
+          <Card>
+            <Card.Body>
+              <Card.Title>Absentee Voting</Card.Title>
+              <Card.Subtitle>November 18, 2020</Card.Subtitle>
+              <Card.Text>Earliest day for a registrar to mail an absentee ballot for the General Election Runoff for Federal Offices</Card.Text>
+              <Button href={getStateLink("absenteeLink", stateData)}>Vote Absentee</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </div>
   )
 }
