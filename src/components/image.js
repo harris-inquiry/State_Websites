@@ -94,6 +94,41 @@ const Image = ({ imageName, ...rest}) => {
           }
         }
       }
+      jonOssoff: file(relativePath: { eq: "images/JonOssoff.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      warnockRaphael: file(relativePath: { eq: "images/RaphaelWarnock.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      demSymbol: file(relativePath: { eq: "images/demSymbol.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      fairFight: file(relativePath: { eq: "images/FairFight.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      newGeorgia: file(relativePath: { eq: "images/newGeorgia.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
