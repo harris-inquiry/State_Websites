@@ -3,8 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Row, Col, Container, Card, Button} from 'react-bootstrap'
+import { Row, Col, Container, Card } from 'react-bootstrap'
 import Banner from "../components/banner"
+
+import "../styles/resources.scss"
+
 
 const Links = {
   leagueWV: "https://www.lwv.org/",
@@ -12,28 +15,48 @@ const Links = {
   rockTheVote: "https://www.rockthevote.org",
 }
 
-const IndexPage = () => (
+const ResourcePage = () => (
   <Layout>
     <SEO title="Resources" description="Get involved"/>
     <Banner image="americanFlag">
       <h1 className="hero-text" style={{fontSize:"5rem"}}>Get involved</h1>
     </Banner>
 
-    <Container className="share" style={{minHeight:300, margin:"1rem auto"}}>
-      <Row style={{height:"100%"}}>
-        <Col md={5} className="share-body" >
-          <h2 className="share-text text-centered">Spread the Word</h2>
-          <Button style={{width:"50%"}}>Share</Button>
+    <Container id="top-container">
+      <h2>Get involved</h2>
+
+      <Row>
+        <Col lg={5} id="dem-party">
+          <Card>
+            <div className="image-contain">
+              <Image imageName="demSymbol" className="image"/>
+            </div>
+            <Card.Body>
+              <Card.Title><a href="https://www.georgiademocrat.org/take-action/">Georgia Democratic Party</a></Card.Title>
+            </Card.Body>
+          </Card>
         </Col>
-        <Col>
-          <Image imageName="votefriends" />
+
+        <Col lg>
+          <Card style={{marginBottom:"1rem"}}>
+            <div className="textImages">
+              <a href="https://fairfight.com/">
+                <Image imageName="fairFight"/>
+              </a>
+            </div>
+          </Card>
+          <Card>
+            <div className="textImages">
+              <a href="https://newgeorgiaproject.org/">
+                <Image imageName="newGeorgia"/>
+              </a>
+            </div>
+          </Card>
         </Col>
       </Row>
-      <br/>
     </Container>
 
     <Container className="resource-cards">
-      <h1>Get involved</h1>
       <Card>
         <Card.Body>
           <Row>
@@ -90,4 +113,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ResourcePage

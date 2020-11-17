@@ -7,7 +7,7 @@ import { getStateLink } from "../data/states"
 const StateElectionDates = ({ stateData }) => {
   return (
     <div id="state-dates">
-      <p className="bottom-note">*Dates may not be up to date: Check with your state's local laws</p>
+      <p className="bottom-note">*Check with the state website for most up-to-date information</p>
       <Row id="state-dates">
         <Col lg>
           <Card>
@@ -17,7 +17,7 @@ const StateElectionDates = ({ stateData }) => {
                 <Card.Subtitle>December 7, 2020</Card.Subtitle>
                 <Card.Text>New Voter Registration deadline</Card.Text>
               </div>
-              <Button href={getStateLink("registerLink", stateData)}>Register Now</Button>
+              <Button variant="dark" href={getStateLink("registerLink", stateData)}>Register Now</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -29,7 +29,7 @@ const StateElectionDates = ({ stateData }) => {
                 <Card.Subtitle>December 14, 2020</Card.Subtitle>
                 <Card.Text>Advanced In Person (Early) Voting begins for the General Election Runoff for Federal Offices</Card.Text>
               </div>
-              <Button href={getStateLink("earlyVoteLink", stateData)}>Vote Early</Button>
+              <Button variant="dark" href={getStateLink("earlyVoteLink", stateData)}>Vote Early</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -41,7 +41,7 @@ const StateElectionDates = ({ stateData }) => {
                 <Card.Subtitle>November 18, 2020</Card.Subtitle>
                 <Card.Text>Earliest day for a registrar to mail an absentee ballot for the General Election Runoff for Federal Offices</Card.Text>
               </div>
-              <Button href={getStateLink("absenteeLink", stateData)}>Vote Absentee</Button>
+              <Button variant="dark" href={getStateLink("absenteeLink", stateData)}>Vote Absentee</Button>
             </Card.Body>
           </Card>
         </Col>

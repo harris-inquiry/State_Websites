@@ -1,0 +1,63 @@
+// Resource page scss
+@import "variables";
+@import "basic_bootstrap";
+
+#top-container {
+  font-family: Poppins;
+  .row {
+     margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 4rem;
+    margin: 2rem 0;
+    font-weight: 600;
+  }
+  #dem-party {
+    margin-bottom: 1rem;
+    .card-title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .image-contain {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      .image {
+        width: 200px;
+        @include media-breakpoint-up(lg) {
+          width: 300px;
+        }
+      }
+    }
+  }
+  .textImages {
+    padding: 1rem;
+  }
+}
+
+.resource-cards {
+  .card {
+    min-height: 212px;
+  }
+  a {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+}
+
+.share {
+  .share-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-down(sm) {
+      margin: 1rem auto;
+    }
+  }
+  .share-text {
+    @include media-breakpoint-only(md) {
+      font-size:1.8rem;
+    }
+  }
+}

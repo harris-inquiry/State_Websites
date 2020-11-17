@@ -1,0 +1,27 @@
+// issues page styling
+@import "variables";
+@import "basic_bootstrap";
+
+.featurettes {
+  .featurette {
+    margin: 1rem auto;
+    background: white;
+    border-radius: 0.8rem;
+    .featurette-heading {
+      font-size: 2.2rem;
+    }
+    .featurette-image {
+      height: 300px;
+    }
+  }
+  .featurette-title {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+hr.featurette-divider {
+  margin: 2rem auto; /* Space out the Bootstrap <hr> more */
+}

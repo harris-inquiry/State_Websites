@@ -14,7 +14,6 @@ header {
   padding: 1rem;
   &.isOpen{
     background: $light-blue + F8;
-    border: solid black;
   }
   .title {
     color: white;
@@ -27,7 +26,6 @@ header {
   flex-wrap: wrap;
   margin: 1rem 0;
   flex: 100%;
-  border: 10px solid rgb(94, 169, 249);
   padding: 10px 0;
   .navLink {
     font-size: 1.5rem;
@@ -38,7 +36,8 @@ header {
     border-radius: 1rem;
     border-bottom-style: solid;
     width: 100%;
-    transition: 0.5s;
+    transition: 500ms;
+    text-transform: uppercase;
     &:hover {
       width:100%;
       text-align: center;
@@ -53,11 +52,8 @@ header {
   }
 }
 
-
 .btnHamburger {
   z-index: 2;
   border: none;
   background: none;
 }
-
-

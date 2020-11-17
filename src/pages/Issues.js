@@ -7,7 +7,9 @@ import SEO from "../components/seo"
 import Banner from "../components/banner"
 import ComparisonChart from "../components/comparison_chart.js"
 
-const WhyVote = () => (
+import "../styles/issues-page.scss"
+
+const IssuesPage = () => (
   <Layout>
     <SEO title="Why Vote" />
     <Banner image="mlkVotingRights">
@@ -45,4 +47,4 @@ const WhyVote = () => (
   </Layout>
 )
 
-export default WhyVote
+export default IssuesPage

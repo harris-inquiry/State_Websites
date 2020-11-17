@@ -40,7 +40,6 @@ const IndexPage = () => {
         <Card.Body>
           <Row>
             <Col className="title-column" md>
-              <p className="subtitle">Go to...</p>
               <Card.Title>
                 <a href="https://www.mvp.sos.ga.gov/MVP/mvp.do">My Voter Georgia</a>
               </Card.Title>

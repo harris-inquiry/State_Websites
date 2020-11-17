@@ -121,112 +121,6 @@ main {
   }
 }
 
-#state-dates {
-  font-family: "Poppins";
-  [class^="col-"] {
-    margin-bottom: 1rem;
-  }
-  .card {
-    height:100%;
-    margin-bottom: 1rem;
-  }
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card-title {
-    font-size: 3rem;
-    margin-top: 1rem;
-    font-weight: 700;
-    @include media-breakpoint-up(xl) {
-      font-size: 3.3rem;
-    }
-  }
-  .card-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .bottom-note {
-    text-align: right;
-    font-size: 1rem;
-  }
-}
-
-#my-voter-georgia {
-  font-family:"Poppins";
-  background: #ffcfcf;
-  padding: 4rem 0;
-  .title-column {
-    text-align: center;
-    .subtitle {
-      margin-bottom: 0;
-      font-size: 1.4rem;
-      text-align: left;
-    }
-    .card-title {
-      font-size: 4rem;
-      font-weight: 700;
-      text-decoration: underline;
-      a{
-        color: black;
-      }
-    }
-  }
-  .text-column {
-    margin-top: 2rem;
-  }
-}
-
-#news-articles {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  .news-title {
-    font-size: 4rem;
-    font-family: "Poppins";
-    font-weight: 600;
-    text-align: right;
-    @include media-breakpoint-down(xs) {
-      font-size: 3.2rem;
-    }
-  }
-  [class^="col-"] {
-    margin-top: 1rem;
-  }
-  .card-title {
-    font-size: 1.6rem;
-  }
-  .card-subtitle {
-    font-size: .9rem;
-    margin-bottom: 1rem;
-    color: grey;
-  }
-  .card-text {
-    .collapse.show {
-      display: inline;
-    }
-  }
-  button {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-    color: blue;
-  }
-}
-
-#candidates {
-  h2 {
-    font-size: 3rem;
-    font-family: "Poppins";
-    font-weight: 700;
-  }
-  .candidate-name {
-    font-size: 2rem;
-  }
-}
-
 #state-svg {
   margin: 1rem 0;
   width: 100%;
@@ -259,30 +153,6 @@ footer {
 }
 
 // Content
-.featurettes {
-  .featurette {
-    margin: 1rem auto;
-    background: white;
-    border-radius: 0.8rem;
-    .featurette-heading {
-      font-size: 2.2rem;
-    }
-    .featurette-image {
-      height: 300px;
-    }
-  }
-  .featurette-title {
-    @include media-breakpoint-down(sm) {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
-
-hr.featurette-divider {
-  margin: 2rem auto; /* Space out the Bootstrap <hr> more */
-}
-
 .form-group {
   margin-bottom: 0;
 }
@@ -292,33 +162,6 @@ hr.featurette-divider {
   @include media-breakpoint-down(sm) {
     padding-left: 15px;
     margin-top: 1rem;
-  }
-}
-
-.resource-cards {
-  .card {
-    min-height: 212px;
-  }
-  a {
-    font-size: 1.75rem;
-    font-weight: 500;
-  }
-}
-
-.share {
-  .share-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @include media-breakpoint-down(sm) {
-      margin: 1rem auto;
-    }
-  }
-  .share-text {
-    @include media-breakpoint-only(md) {
-      font-size:1.8rem;
-    }
   }
 }
 
