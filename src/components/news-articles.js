@@ -26,7 +26,7 @@ const NewsArticles = () => {
 
   return (
     <div id="news-articles" className="container">
-      <h2 className="news-title">In the News</h2>
+      <h2 className="news-title">In the <span>News</span></h2>
       <Row>
 
         <Col lg>
