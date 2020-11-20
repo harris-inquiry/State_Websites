@@ -36,6 +36,48 @@ const IndexPage = () => {
         <StateElectionDates stateData={STATE_DATA}/>
       </Container>
 
+
+      <div id="candidates">
+        <Container className="candidate ossoff">
+          <Row>
+            <Col md className="candidate-image">
+              <a href="https://electjon.com/">
+                <Image imageName="jonOssoff" style={{height:360}}/>
+              </a>
+            </Col>
+            <Col className="candidate-text">
+              <div>
+                <h3 className="candidate-name">Jon Ossoff</h3>
+                <a href="https://electjon.com/">
+                  <h4>https://electjon.com/</h4>
+                </a>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
+        <Container className="candidate warnock">
+          <Row>
+            <Col className="candidate-image">
+              <a href="https://warnockforgeorgia.com/">
+                <Image imageName="warnockRaphael" style={{height:360}}/>
+              </a>
+            </Col>
+            <Col md className="candidate-text">
+              <div>
+                <h3 className="candidate-name">Reverend Raphael Warnock</h3>
+                <a href="https://warnockforgeorgia.com/">
+                  <h4>https://warnockforgeorgia.com/</h4>
+                </a>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
+      </div>
+
+
+
       <Card id="my-voter-georgia">
         <Card.Body>
           <Row>
@@ -64,36 +106,6 @@ const IndexPage = () => {
       </Card>
 
       <NewsArticles/>
-
-
-      <div id="candidates" className="container">
-        <h2>The Candidates</h2>
-        <Row>
-          <Col md>
-            <Card>
-              <a href="https://electjon.com/">
-                <Image imageName="jonOssoff" style={{height:360}}/>
-              </a>
-              <Card.Body>
-                <Card.Title className="candidate-name">Jon Ossoff</Card.Title>
-                <Card.Subtitle><a href="https://electjon.com/">https://electjon.com/</a></Card.Subtitle>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md>
-            <Card>
-              <a href="https://warnockforgeorgia.com/">
-                <Image imageName="warnockRaphael" style={{height:360}}/>
-              </a>
-              <Card.Body>
-                <Card.Title className="candidate-name">Reverend Raphael Warnock</Card.Title>
-                <Card.Subtitle><a href="https://warnockforgeorgia.com/">https://warnockforgeorgia.com/</a></Card.Subtitle>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </div>
-
 
 
       <Container fluid>

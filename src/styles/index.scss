@@ -101,27 +101,49 @@
 }
 
 #candidates {
-  h2 {
-    font-size: 3rem;
-    font-family: "Poppins";
-    font-weight: 700;
+  background: #3737a8;
+  .candidate {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .candidate-name {
+      color: white;
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Poppins";
+    }
+    .candidate-image {
+      &:before {
+        content: "";
+        background: orange;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .candidate-text {
+      a { color: white; }
+      & div {
+        background: rgba(0,0,0,.2);
+        padding: 1rem;
+      }
+    }
   }
-  .candidate-name {
-    font-size: 2rem;
-    font-weight: 700;
+  .warnock {
+    .candidate-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      @include media-breakpoint-up(md) {
+        order: -1;
+      }
+    }
   }
   a:hover {
     img {
       height: 105% !important;
       transition: opacity 500ms ease 0s, height 300ms !important;
-    }
-  }
-  .card-body {
-    background: #3a83e1;
-    color: white;
-    text-align: center;
-    a {
-      color: white;
     }
   }
   [class^="col-"] {
