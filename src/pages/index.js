@@ -32,11 +32,6 @@ const IndexPage = () => {
         </Row>
       </CarouselBanner>
 
-      <Container>
-        <StateElectionDates stateData={STATE_DATA}/>
-      </Container>
-
-
       <div id="candidates">
         <Container className="candidate ossoff">
           <Row>
@@ -76,7 +71,9 @@ const IndexPage = () => {
 
       </div>
 
-
+      <Container>
+        <StateElectionDates stateData={STATE_DATA}/>
+      </Container>
 
       <Card id="my-voter-georgia">
         <Card.Body>
