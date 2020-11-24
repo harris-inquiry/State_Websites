@@ -30,6 +30,16 @@ const IndexPage = () => {
             <div className="calendar">January 5, 2021 Georgia Senate Runoff Election</div>
           </Col>
         </Row>
+        <div id="candidates-fold">
+          <a href="https://warnockforgeorgia.com/">
+            <Image imageName="warnockRaphael" style={{width:"40%"}}/>
+            <p>Reverend Raphael Warnock</p>
+          </a>
+          <a href="https://electjon.com/">
+            <Image imageName="jonOssoff" style={{width:"40%"}}/>
+            <p>Jon Ossoff</p>
+          </a>
+        </div>
       </CarouselBanner>
 
       <div id="candidates">
