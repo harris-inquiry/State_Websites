@@ -86,15 +86,25 @@ main {
     // }
     @include media-breakpoint-up(lg) {
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
       top: 90px;
       width: 45%;
       height: 75%;
-    }
-    a {
-      display: flex;
-      color: white;
+      a {
+        height: 100%;
+        width: 50%;
+      }
+      .candidate-image {
+        position: relative;
+        height: 90%;
+        margin: 1rem;
+        h4 {
+          font-size: 2rem;
+        }
+        .imageText {
+          top: auto;
+          bottom: 0;
+        }
+      }
     }
   }
 

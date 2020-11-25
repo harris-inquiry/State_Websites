@@ -32,15 +32,21 @@ const IndexPage = () => {
         </Row>
         <div id="candidates-fold">
           <a href="https://warnockforgeorgia.com/">
-            <Image imageName="warnockRaphael" style={{width:"40%"}}/>
-            <p>Reverend Raphael Warnock</p>
+            <ImageCard className="candidate-image" imageName="warnockRaphael">
+              <h4>Reverend Raphael Warnock</h4>
+            </ImageCard>
           </a>
           <a href="https://electjon.com/">
-            <Image imageName="jonOssoff" style={{width:"40%"}}/>
-            <p>Jon Ossoff</p>
+            <ImageCard className="candidate-image" imageName="jonOssoff">
+              <h4>Jon Ossoff</h4>
+            </ImageCard>
           </a>
         </div>
       </CarouselBanner>
+
+      <Container>
+        <StateElectionDates stateData={STATE_DATA}/>
+      </Container>
 
       <div id="candidates">
         <Container className="candidate ossoff">
@@ -78,12 +84,8 @@ const IndexPage = () => {
             </Col>
           </Row>
         </Container>
-
       </div>
 
-      <Container>
-        <StateElectionDates stateData={STATE_DATA}/>
-      </Container>
 
       <Card id="my-voter-georgia">
         <Card.Body>
@@ -119,15 +121,19 @@ const IndexPage = () => {
         <Row className="imageButtons">
           <Col md={6}>
             <Link to="/Issues">
-              <ImageCard imageName="silentSentinels" title="ON THE ISSUES" style={{height:400}}>
+              <ImageCard imageName="silentSentinels" style={{height:400}}>
+                <h4>ON THE ISSUES</h4>
                 <p>Find out more about the issues this November</p>
+                <button>Learn More</button>
               </ImageCard>
             </Link>
           </Col>
           <Col md={6}>
             <Link to="/resources">
-              <ImageCard imageName="votefriends" title="OTHER RESOURCES" style={{height:400}}>
+              <ImageCard imageName="votefriends" style={{height:400}}>
+                <h4>OTHER RESOURCES</h4>
                 <p>Find out how you can help</p>
+                <button>Learn More</button>
               </ImageCard>
             </Link>
           </Col>
